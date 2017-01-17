@@ -1,0 +1,19 @@
+path: /docs
+url:  'http://knoema.github.io/docs'
+
+#markdown: kramdown
+
+#sass:
+# sass_dir: css
+# style:    expanded
+
+include: ["_pages"]
+exclude:
+- README.md
+
+permalink: /:title
+
+excerpt_separator: ""
+
+safe: true
+lsi: false
