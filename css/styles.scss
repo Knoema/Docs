@@ -184,6 +184,7 @@ header {
   border-bottom: 1px solid #cfe4f5;
 
   .knoema-logo {
+    margin: 1em 0 1em -15px;
     display: block;
     width: 165px;
     height: 25px;
@@ -256,6 +257,7 @@ header {
       li > a {
         padding: 5px 25px;
         position: relative;
+        font-size: .8em;
       }
     }
 
