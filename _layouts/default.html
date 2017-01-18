@@ -46,10 +46,10 @@ The following part removes dulpicated tags and invalid tags like blank tag.
 {% endfor %}
 
 <body>
-	<div class="container body-content docs">
+	<div class="container body-content">
 		<div class="row">
 			<header class="col-md-2">
-				<nav class="docs-nav {% comment %}visible-md visible-lg {% endcomment %}affix-top" id="docs-navbar">
+				<nav class="docs-nav affix-top" id="docs-navbar">
 					<ul class="nav" id="main-nav">
 
 						{% for cat in cats %}
@@ -76,6 +76,7 @@ The following part removes dulpicated tags and invalid tags like blank tag.
 	</div>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="{{ site.path }}/js/bootstrap.min.js"></script>
-	<!--<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>-->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+	<script src="{{ site.path }}/js/main.js"></script>
 </body>
 </html>
