@@ -46,9 +46,12 @@ The following part removes dulpicated tags and invalid tags like blank tag.
 {% endfor %}
 
 <body>
+	<header>
+		<div class="row"></div>
+	</header>
 	<div class="container body-content">
 		<div class="row">
-			<header class="col-md-2">
+			<aside class="col-md-2">
 				<nav class="docs-nav affix-top" id="docs-navbar">
 					<ul class="nav" id="main-nav">
 
@@ -70,10 +73,10 @@ The following part removes dulpicated tags and invalid tags like blank tag.
 			</header>
 			{{ content }}
 		</div>
-		<footer>
-			<p>&copy; 2011-2017 Knoema. All rights reserved.</p>
-		</footer>
 	</div>
+	<footer>
+		<p>&copy; 2011-2017 Knoema. All rights reserved.</p>
+	</footer>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="{{ site.path }}/js/bootstrap.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
