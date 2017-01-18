@@ -187,7 +187,7 @@ header {
     display: block;
     width: 165px;
     height: 25px;
-    background-image: url(/docs/img/logo_knoema.png);
+    background-image: url(/img/logo_knoema.png);
 
     @media only screen and (-webkit-min-device-pixel-ratio: 2),
           only screen and (min--moz-device-pixel-ratio: 2),
@@ -195,7 +195,7 @@ header {
           only screen and (min-resolution: 2ppx),
           only screen and (min-device-pixel-ratio: 2)
     {
-      background-image: url(/docs/img/logo_knoema-x2.png);
+      background-image: url(/img/logo_knoema-x2.png);
       background-size: cover;
     }
   }
@@ -286,13 +286,13 @@ header {
         }
 
         > a:hover {
-          background: url(/docs/img/expand-up.svg) 110px 5px no-repeat;
+          background: url(/img/expand-up.svg) 110px 5px no-repeat;
           background-size: 24px;
         }
       }
 
       &.collapsed > a:hover {
-        background: url(/docs/img/expand-down.svg) 110px 5px no-repeat;
+        background: url(/img/expand-down.svg) 110px 5px no-repeat;
         background-size: 24px;
       }
     }
