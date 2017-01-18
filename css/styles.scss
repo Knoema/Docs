@@ -1,23 +1,6 @@
 ---
 ---
 
-{
-  @mixin hires($url, $ext: "png", $backgroundSize: cover) {
-    background-image: url("#{$url}.#{$ext}");
-
-    @media 
-    only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (min--moz-device-pixel-ratio: 2),
-    only screen and (min-resolution: 192dpi),
-    only screen and (min-resolution: 2ppx),
-    only screen and (min-device-pixel-ratio: 2)
-    {
-      background-image: url("#{$url}-x2.#{$ext}");
-      background-size: $backgroundSize;
-    }
-  }
-}
-
 html {
   min-height: 100%;
   position: relative;
@@ -204,7 +187,17 @@ header {
     display: block;
     width: 165px;
     height: 25px;
-    @include hires(/docs/img/knoema-logo);
+    background-image: url(/docs/img/logo_knoema.png);
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+          only screen and (min--moz-device-pixel-ratio: 2),
+          only screen and (min-resolution: 192dpi),
+          only screen and (min-resolution: 2ppx),
+          only screen and (min-device-pixel-ratio: 2)
+    {
+      background-image: url(/docs/img/logo_knoema-x2.png);
+      background-size: cover;
+    }
   }
 }
 
