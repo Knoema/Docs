@@ -390,6 +390,10 @@ footer {
         margin-left: 15px;
         color: #e7edf2;
 
+        &:hover {
+          opacity: 1;
+        }
+
         &.facebook,
         &.twitter,
         &.google {
