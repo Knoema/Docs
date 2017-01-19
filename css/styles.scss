@@ -4,7 +4,7 @@
 html {
   min-height: 100%;
   position: relative;
-  font-size: 9px;
+  font-size: 16px;
 }
 
 body, html {
@@ -18,16 +18,6 @@ body {
 
 button {
   border: none;
-}
-
-html {
-  font-size: 10px;
-}
-
-@media (min-width: 1200px) {
-  html {
-    font-size: 10px;
-  }
 }
 
 @font-face {
@@ -431,8 +421,61 @@ footer {
 
 footer {
     clear: both;
-    background-color: #616161;
+    background-color: #7d9cb3;
     color: #f2f2f2;
-    text-align: left;
+    text-align: center;
 	  min-height: 80px;
+
+    .wrapper {
+      width: 1101px;
+      margin: auto;
+      padding: 10px 15px;
+      text-align: right;
+
+      span {
+        float: left;
+      }
+
+      a {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        opacity: .6;
+        text-decoration: none;
+        outline: none;
+        margin-left: 15px;
+        color: #e7edf2;
+
+        &.facebook,
+        &.twitter,
+        &.google {
+          background-image: url(/img/sprite.png);
+          background-size: 308px 84px;
+
+          @media only screen and (-webkit-min-device-pixel-ratio: 2),
+          only screen and (min--moz-device-pixel-ratio: 2),
+          only screen and (min-resolution: 192dpi),
+          only screen and (min-resolution: 2ppx),
+          only screen and (min-device-pixel-ratio: 2)
+          {
+            background-image: url(/img/sprite-x2.png);
+            background-size: 616px 168px;
+          }
+        }
+
+        &.facebook {
+          background-position: -182px 0;
+        }
+
+        &.twitter {
+          background-position: -235px 0;
+        }
+
+        &.google {
+          background-position: -210px 0;
+        }
+
+
+      }
+    }
 }

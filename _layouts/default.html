@@ -79,7 +79,19 @@ The following part removes dulpicated tags and invalid tags like blank tag.
 		</div>
 	</div>
 	<footer>
-		<p>&copy; 2011-2017 Knoema. All rights reserved.</p>
+		<div class="wrapper">
+			<span class="plain" id="copyright">
+				&copy;2011-{{ site.time | date: '%Y' }} Knoema. All rights reserved.
+			</span>
+
+			<a class="facebook" href="https://www.facebook.com/knoema.co" rel="nofollow"></a>
+			<a class="twitter" href="https://twitter.com/knoema" rel="nofollow"></a>
+			<a class="google" href="https://plus.google.com/+Knoema" rel="nofollow"></a>
+
+			<a class="item" href="//knoema.com/about/us" rel="nofollow">About Us</a>
+			<a class="item" href="http://blog.knoema.com" rel="nofollow">Blog</a>
+			<a href="//knoema.com/legal/termsofuse" rel="nofollow">Terms of service</a>
+		</div>
 	</footer>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="{{ site.path }}/js/bootstrap.min.js"></script>
