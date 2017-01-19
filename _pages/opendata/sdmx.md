@@ -11,7 +11,7 @@ Knoema platform supports subset of the [SDMX 2.0](https://sdmx.org/?page_id=16 "
 
 ## How to enumerate datasets
 
-To enumerate all public datasets make HTTP GET request to http://knoema.com/api/1.0/sdmx. This endpoint takes no input parameters and returns Structure message in response. For every dataset there is a key family defined within response's **Structure** message.
+To enumerate all public datasets make HTTP GET request to [http://knoema.com/api/1.0/sdmx]. This endpoint takes no input parameters and returns Structure message in response. For every dataset there is a key family defined within response's **Structure** message.
 
 {% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>

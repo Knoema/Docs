@@ -152,8 +152,20 @@ textarea {
   position: relative;
 }
 
+.container {
+  padding-left: 0;
+  padding-right: 0;
+  width: 1024px;
+
+  @media all and (min-width:768px),
+    all and (min-width:992px),
+    all and (min-width:1200px) {
+      width: 1024px;
+    }
+}
+
 .body-content {
-  padding-top: 25px;
+  padding-top: 0;
   padding-bottom: 40px;
 }
 
@@ -178,6 +190,7 @@ textarea {
 .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12
 {
   padding-left: 0;
+  padding-right: 0;
 }
 
 header {
@@ -200,6 +213,15 @@ header {
       background-size: cover;
     }
   }
+}
+
+aside {
+  padding-left: 7px;
+  padding-right: 5px;
+}
+
+section {
+  padding-right: 7px;
 }
 
 #docs-navbar.affix {
