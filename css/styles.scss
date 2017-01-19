@@ -168,14 +168,26 @@ textarea {
 
 header {
   background: #373277;
+  min-width: 1101px;
 
   a {
     color: white;
+    display: inline-block;
+
+    &.docs-menu-item {
+      margin: 1em 2em;
+      font-size: 1.1em;
+
+      &:hover {
+        color: white;
+        text-decoration: none;
+      }
+    }
   }
 
   .knoema-logo {
     margin: 1em 0 1em 7px;
-    display: inline-block;
+    float: left;
     width: 112px;
     height: 20px;
     background-image: url(/img/sprite.png);
@@ -254,14 +266,14 @@ section {
 
     > li {
       > a {
-        padding: 8px 15px;
+        padding: 8px 0 8px 15px;
         font-size: 14px;
       }
 
       li > a {
-        padding: 5px 25px;
+        padding: 5px 0 5px 25px;
         position: relative;
-        font-size: .8em;
+        font-size: .9em;
       }
     }
 
@@ -270,7 +282,7 @@ section {
     }
 
     > li > .area {
-      font-size: 1.2rem;
+      font-size: 1rem;
       font-family: wf_segoe-ui_semibold;
       text-transform: uppercase;
     }
@@ -282,23 +294,19 @@ section {
       border-radius: inherit;
       box-shadow: inherit;
 
-      > a {
-        margin-right: 40px;
-      }
-
       &.expanded {
         a {
           border-color: #373277;
         }
 
         > a:hover {
-          background: url(/img/expand-up.svg) 110px 5px no-repeat;
+          background: url(/img/expand-up.svg) 135px 10px no-repeat;
           background-size: 24px;
         }
       }
 
       &.collapsed > a:hover {
-        background: url(/img/expand-down.svg) 110px 5px no-repeat;
+        background: url(/img/expand-down.svg) 135px 10px no-repeat;
         background-size: 24px;
       }
     }
@@ -356,7 +364,11 @@ footer {
     background-color: #7d9cb3;
     color: #f2f2f2;
     text-align: center;
-	  min-height: 80px;
+    min-width: 1101px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
     .wrapper {
       width: 1101px;
@@ -409,7 +421,8 @@ footer {
 
         &.item {
           width: auto;
-          height: auto;
+          line-height: 24px;
+          float: right;
         }
       }
     }
