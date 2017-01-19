@@ -43,14 +43,14 @@ To enumerate all public datasets make HTTP GET request to <http://knoema.com/api
 
 To retrieve metadata for specific dataset it's necessary to send HTTP GET request to the following URL:
 
-{% highlight %}
+```
 http://knoema.com/api/1.0/sdmx/<datasetId>
-{% endhighlight %}
+```
 
 Here **datasetId** is id of corresponding dataset returned by enumeration endpoint. Response will contain **Structure** message with nested information about dataset dimensions represented by **CodeLists** and dataset's structure described as key family components
 
 <pre>GET <https://knoema.com/api/1.0/sdmx/OECDEO90></pre>
-{% highlight %}
+{% highlight html %}
 <?xml version="1.0" encoding="utf-8"?>
 <message:structure xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" xmlns:message="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure http://www.sdmx.org/docs/2_0/SDMXStructure.xsd http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message http://www.sdmx.org/docs/2_0/SDMXMessage.xsd">
     <Header xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message">
