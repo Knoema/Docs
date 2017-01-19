@@ -13,6 +13,7 @@ Knoema platform supports subset of the [SDMX 2.0](https://sdmx.org/?page_id=16 "
 
 To enumerate all public datasets make HTTP GET request to <http://knoema.com/api/1.0/sdmx>. This endpoint takes no input parameters and returns Structure message in response. For every dataset there is a key family defined within response's **Structure** message.
 
+<pre>GET <https://knoema.com/api/1.0/sdmx></pre>
 {% highlight html %}
 <?xml version="1.0" encoding="utf-8"?>
  <message:structure xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" xmlns:message="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure http://www.sdmx.org/docs/2_0/SDMXStructure.xsd http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message http://www.sdmx.org/docs/2_0/SDMXMessage.xsd">
@@ -37,3 +38,151 @@ To enumerate all public datasets make HTTP GET request to <http://knoema.com/api
          </message:KeyFamilies>
  </message:structure>
 {% endhighlight %}
+
+## How to retrieve dataset metadata
+
+To retrieve metadata for specific dataset it's necessary to send HTTP GET request to the following URL:
+
+{% highlight %}
+http://knoema.com/api/1.0/sdmx/<datasetId>
+{% endhighlight %}
+
+Here **datasetId** is id of corresponding dataset returned by enumeration endpoint. Response will contain **Structure** message with nested information about dataset dimensions represented by **CodeLists** and dataset's structure described as key family components
+
+<pre>GET <https://knoema.com/api/1.0/sdmx/OECDEO90></pre>
+{% highlight %}
+<?xml version="1.0" encoding="utf-8"?>
+<message:structure xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" xmlns:message="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure http://www.sdmx.org/docs/2_0/SDMXStructure.xsd http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message http://www.sdmx.org/docs/2_0/SDMXMessage.xsd">
+    <Header xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message">
+        <Id>none</Id>
+        <Truncated>false</Truncated>
+        <Prepared>2/14/2012 10:53:19 AM</Prepared>
+        <Sender Id="Knoema">
+            <name xml:lang="en">Knoema Technologies</name>
+        </Sender>
+    </Header>
+    <message:CodeLists>
+        <CodeList id="CL_OECDEO90_Location" agencyId="Knoema" isFinal="True">
+            <Name xml:lang="en">Location codelist</Name>
+            <Code value="1000000">
+                <Description xml:lang="en">Australia</Description>
+            </Code>
+            <Code value="1000010">
+                <Description xml:lang="en">Austria</Description>
+            </Code>
+            <Code value="1000020">
+                <Description xml:lang="en">Belgium</Description>
+            </Code>
+        </CodeList>
+        <CodeList id="CL_OECDEO90_Variable" agencyId="Knoema" isFinal="True">
+            <Name xml:lang="en">Variable codelist</Name>
+            <Code value="1000000">
+                <Description xml:lang="en">External sectors, trade and payments</Description>
+            </Code>
+            <Code value="1000010" parentCode="1000000">
+                <Description xml:lang="en">Balance of income, value in USD, balance of payments basis</Description>
+            </Code>
+        </CodeList>
+        <CodeList id="CL_OECDEO90_UNIT" agencyId="Knoema" isFinal="True">
+            <Name xml:lang="en">Unit of measure</Name>
+            <Code value="1192020">
+                <Description xml:lang="en">Percentage of GDP</Description>
+            </Code>
+            <Code value="1190640">
+                <Description xml:lang="en">growth rate</Description>
+            </Code>
+            <Code value="1192040">
+                <Description xml:lang="en">Value in USD</Description>
+            </Code>
+            <Code value="1192000">
+                <Description xml:lang="en">level</Description>
+            </Code>
+        </CodeList>
+        <CodeList id="CL_UNIT_MULT" agencyId="Knoema" isFinal="True">
+            <Name xml:lang="en">Multiplication factor</Name>
+            <Code value="1">
+                <Description xml:lang="en">Units</Description>
+            </Code>
+            <Code value="1000">
+                <Description xml:lang="en">Thousands</Description>
+            </Code>
+            <Code value="1000000">
+                <Description xml:lang="en">Millions</Description>
+            </Code>
+            <Code value="1000000000">
+                <Description xml:lang="en">Billions</Description>
+            </Code>
+        </CodeList>
+        <CodeList id="CL_FREQ" agencyId="Knoema" isFinal="True">
+            <Name xml:lang="en">Frequency Codelist</Name>
+            <Code value="A">
+                <Description xml:lang="en">Annual</Description>
+            </Code>
+        </CodeList>
+        <CodeList id="CL_TIME_FORMAT" agencyId="Knoema" isFinal="True">
+            <Name xml:lang="en">Time Formats based on ISO 8601</Name>
+            <Code value="P1Y">
+                <Description xml:lang="en">Annual</Description>
+            </Code>
+            <Code value="P6M">
+                <Description xml:lang="en">Semi-annual</Description>
+            </Code>
+            <Code value="P3M">
+                <Description xml:lang="en">Quarterly</Description>
+            </Code>
+        </CodeList>
+    </message:CodeLists>
+    <message:Concepts>
+        <ConceptScheme id="OECDEO90" agencyId="Knoema" isFinal="True">
+            <Name xml:lang="en">Economic Outlook No 90, December 2011</Name>
+            <Concept id="Location" agencyId="Knoema">
+                <name xml:lang="en">Location</name>
+            </Concept>
+            <Concept id="Variable" agencyId="Knoema">
+                <name xml:lang="en">Variable</name>
+            </Concept>
+            <Concept id="UNIT" agencyId="Knoema">
+                <name xml:lang="en">Unit of measure</name>
+            </Concept>
+            <Concept id="UNIT_MULT" agencyId="Knoema">
+                <name xml:lang="en">Multiplication factor</name>
+            </Concept>
+            <Concept id="FREQ" agencyId="Knoema">
+                <name xml:lang="en">Frequency</name>
+            </Concept>
+            <Concept id="TIME_PERIOD" agencyId="Knoema">
+                <name xml:lang="en">Time</name>
+            </Concept>
+            <Concept id="TIME_FORMAT" agencyId="Knoema">
+                <name xml:lang="en">Time format</name>
+            </Concept>
+            <Concept id="OBS_VALUE" agencyId="Knoema">
+                <name xml:lang="en">Observation value</name>
+            </Concept>
+        </ConceptScheme>
+    </message:Concepts>
+    <message:KeyFamilies>
+        <KeyFamily id="OECDEO90" agencyId="Knoema" isfinal="True">
+            <Name xml:lang="en">Data Mapper</Name>
+            <Components>
+                <Dimension conceptRef="Location" conceptSchemaRef="OECDEO90" conceptVersion="1.0" conceptSchemeAgency="Knoema" codelist="CL_Location" codelistVersion="1.0" codelistAgency="Knoema" />
+                <Dimension conceptRef="Variable" conceptSchemaRef="OECDEO90" conceptVersion="1.0" conceptSchemeAgency="Knoema" codelist="CL_Variable" codelistVersion="1.0" codelistAgency="Knoema" />
+                <Dimension conceptRef="FREQ" conceptSchemaRef="OECDEO90" conceptVersion="1.0" conceptSchemeAgency="Knoema" codelist="CL_OECDEO90_FREQ" codelistVersion="1.0" codelistAgency="Knoema" isFrequencyDimension="True" />
+                <TimeDimension ConceptRef="Time_period" conceptSchemeRef="OECDEO90" />
+                <PrimaryMeasure conceptRef="OBS_VALUE" conceptSchemeRef="OECDEO90">
+                    <TextFormat TextType="Double" />
+                </PrimaryMeasure>
+                <Attribute conceptref="UNIT" conceptSchemeRef="OECDEO90" conceptSchemeAgency="Knoema" codelist="CL_OECDEO90_UNIT" codelistAgency="Knoema" attachmentLevel="series" attachmentStatus="Mandatory" />
+                <Attribute conceptref="UNIT_MULT" conceptSchemeRef="OECDEO90" conceptSchemeAgency="Knoema" codelist="CL_UNIT_MULT" codelistAgency="Knoema" attachmentLevel="series" attachmentStatus="Mandatory" />
+                <Attribute conceptref="TIME_FORMAT" conceptSchemeRef="OECDEO90" conceptSchemeAgency="Knoema" codelist="CL_TIME_FORMAT" codelistAgency="Knoema" attachmentLevel="series" attachmentStatus="Mandatory" isTimeFormat="True">
+                    <TextFormat TextType="String" />
+                </Attribute>
+            </Components>
+        </KeyFamily>
+    </message:KeyFamilies>
+</message:structure>
+{% endhighlight %}
+
+## How to retrieve data
+
+Knoema platform supports data retrieval in Compact SDMX format. To retrieve data from specific dataset HTTP GET request should be made to <http://knoema.com/api/1.0/sdmx/getdata> endpoint. This endpoint supports the following parameters:
