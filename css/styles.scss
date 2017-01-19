@@ -155,29 +155,18 @@ textarea {
 .container {
   padding-left: 0;
   padding-right: 0;
-  width: 1024px;
+  width: 1101px;
 
   @media all and (min-width:768px),
     all and (min-width:992px),
     all and (min-width:1200px) {
-      width: 1024px;
+      width: 1101px;
     }
 }
 
 .body-content {
   padding-top: 0;
   padding-bottom: 40px;
-}
-
-.row.display-flex {
-  display: flex;
-  flex-wrap: wrap;
-
-  > [class*=col-] {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-  }
 }
 
 @keyframes a {
@@ -209,13 +198,15 @@ header {
   }
 }
 
-aside {
+aside { 
   padding-left: 7px;
   padding-right: 5px;
+  width: 183px;
 }
 
 section {
   padding-right: 7px;
+  width: 917px;
 }
 
 #docs-navbar.affix {
