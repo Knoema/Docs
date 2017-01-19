@@ -180,7 +180,7 @@ header {
   border-bottom: 1px solid #cfe4f5;
 
   .knoema-logo {
-    margin: 1em 0 1em -15px;
+    margin: 1em 0 1em 7px;
     display: block;
     width: 165px;
     height: 25px;
@@ -202,11 +202,13 @@ aside {
   padding-left: 7px;
   padding-right: 5px;
   width: 183px;
+  float: left;
 }
 
 section {
   padding-right: 7px;
   width: 917px;
+  float: left;
 }
 
 #docs-navbar.affix {
