@@ -14,7 +14,7 @@ Knoema platform supports subset of the [SDMX 2.0](https://sdmx.org/?page_id=16 "
 To enumerate all public datasets make HTTP GET request to <http://knoema.com/api/1.0/sdmx>. This endpoint takes no input parameters and returns Structure message in response. For every dataset there is a key family defined within response's **Structure** message.
 
 <pre>GET <https://knoema.com/api/1.0/sdmx></pre>
-{% highlight html linenos %}
+{% highlight html %}
 <?xml version="1.0" encoding="utf-8"?>
  <message:structure xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" xmlns:message="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure http://www.sdmx.org/docs/2_0/SDMXStructure.xsd http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message http://www.sdmx.org/docs/2_0/SDMXMessage.xsd">
          <Header xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message">
