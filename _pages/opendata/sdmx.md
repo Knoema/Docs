@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SDMX"
+title: "SDMX support"
 permalink: "/opendata/sdmx"
 categories: ["opendata"]
 ---
@@ -187,10 +187,27 @@ Here **datasetId** is id of corresponding dataset returned by enumeration endpoi
 
 Knoema platform supports data retrieval in Compact SDMX format. To retrieve data from specific dataset HTTP GET request should be made to <http://knoema.com/api/1.0/sdmx/getdata> endpoint. This endpoint supports the following parameters:
 
-|Parameter  |Description  |Status   |
-|-----------|-------------|---------|
-|dataflow   |Id of dataset|Mandatory|
-|key        |This parameter is constructed from the list of dimension members included in request for the dataset. For every dimension there should be its members included into request listed and separated by "+" characted.      |Mandatory|
+<table class="table">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>dataflow</td>
+      <td>Id of dataset</td>
+      <td>Mandatory</td>
+    </tr>
+    <tr>
+      <td>key</td>
+      <td>This parameter is constructed&nbsp;from the list of dimension members included in request for the dataset.&nbsp;For every dimension there should be its members included into request listed and separated by “+” characted.</td>
+      <td>Mandatory</td>
+    </tr>
+  </tbody>
+</table>
 
 Response will contain data in Compact SDMX format encapsulated into Structure message.
 
