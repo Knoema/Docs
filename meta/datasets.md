@@ -132,7 +132,7 @@ Returns the list of datasets<br>
 				"key": 2125000,
 				"id": "country",
 				"name": "Country",
-		 		"isGeo": true,
+				"isGeo": true,
 				"geoType": "region"
 			},
 			{
