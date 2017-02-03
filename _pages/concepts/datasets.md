@@ -15,6 +15,6 @@ Each dataset in Knoema has a number of associated **dimensions** used to categor
 
 You can access information about datasets and their dimensions using endpoints in /api/meta namespace:
 
-[Getting list of all available datasets](/meta/datasets "")<br>
-[Getting dataset details (including list of dimensions)](/meta/datasetdetails "")<br>
-[Getting dimension details](/meta/dimension "")
+[Getting list of all available datasets](/meta/datasets "List of datasets") <br>
+[Getting dataset details (including list of dimensions)](/meta/datasetdetails "Dataset details") <br>
+[Getting dimension details](/meta/dimension "Dimension")
