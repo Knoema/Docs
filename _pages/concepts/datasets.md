@@ -12,3 +12,8 @@ The basic unit of data or information in Knoema is **dataset**. Each dataset con
 Each dataset consists of **observations** or **records** which hold numerical values (data) and descriptive information (metadata) about these values. Metadata is used typically to categorize data (structural metadata) or provide additional information about data (referential metadata). Typical examples of structural metadata are country/region information, name of indicator etc. Referential metadata is used to keep various notes/comments about data.
 
 Each dataset in Knoema has a number of associated **dimensions** used to categorize data in this dataset. Each dimension is an ordered hierarchical list of values or **dimension members**. Dataset's dimension are used as filters while accessing data. For example, in a dataset having Country and Indicator dimensions user can select all population data for United States by setting filter to Country = United States and Indicator = Population.
+
+You can access information about datasets and their dimensions using endpoints in /api/meta namespace:
+[Getting list of all available datasets](/meta/datasets "")
+[Getting dataset details (including list of dimensions)](/meta/datasetdetails "")
+[Getting dimension details](/meta/dimension "")

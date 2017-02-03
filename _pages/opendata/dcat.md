@@ -77,7 +77,7 @@ Here response contains information about dataset title, tags, published date, pu
 ## How to retrieve dataset distribution
 
 Distribution represents a specific available form of a dataset. In Knoema Distribution represented by a web service that enables access to the data of a dataset.
-This web service is described by access url and format of data. To retrieve dataset distribution make a HTTP GET request to https://knoema.com/api/1.0/dcat/distribution/<datasetId>.
+This web service is described by access url and format of data. To retrieve dataset distribution make a HTTP GET request to https://knoema.com/api/1.0/dcat/distribution/&lt;datasetId&gt;.
 
 <pre>GET https://knoema.com/api/1.0/dcat//distribution/OECDHDHCU2011</pre>
 {% highlight xml %}
