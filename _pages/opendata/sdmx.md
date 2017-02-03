@@ -186,3 +186,8 @@ Here **datasetId** is id of corresponding dataset returned by enumeration endpoi
 ## How to retrieve data
 
 Knoema platform supports data retrieval in Compact SDMX format. To retrieve data from specific dataset HTTP GET request should be made to <http://knoema.com/api/1.0/sdmx/getdata> endpoint. This endpoint supports the following parameters:
+
+|Parameter|Description  |Status   |
+|---------|-------------|---------|
+|dataflow |Id of dataset|Mandatory|
+|key      |This parameter is constructed from the list of dimension members included in request for the dataset. For every dimension there should be its members included into request listed and separated by "+" characted.      |Mandatory|
