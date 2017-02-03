@@ -187,7 +187,50 @@ Here **datasetId** is id of corresponding dataset returned by enumeration endpoi
 
 Knoema platform supports data retrieval in Compact SDMX format. To retrieve data from specific dataset HTTP GET request should be made to <http://knoema.com/api/1.0/sdmx/getdata> endpoint. This endpoint supports the following parameters:
 
-|Parameter|Description  |Status   |
-|---------|-------------|---------|
-|dataflow |Id of dataset|Mandatory|
-|key      |This parameter is constructed from the list of dimension members included in request for the dataset. For every dimension there should be its members included into request listed and separated by "+" characted.      |Mandatory|
+|Parameter  |Description  |Status   |
+|-----------|-------------|---------|
+|dataflow   |Id of dataset|Mandatory|
+|key        |This parameter is constructed from the list of dimension members included in request for the dataset. For every dimension there should be its members included into request listed and separated by "+" characted.      |Mandatory|
+
+Response will contain data in Compact SDMX format encapsulated into Structure message.
+
+<pre>GET https://knoema.com/api/1.0/sdmx/getdata?dataflow=OECDEO90&key=1000000+1000010+1000020.1000020.A</pre>
+{% highlight html %}
+<?xml version="1.0" encoding="utf-8"?>
+<message:structure xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" xmlns:message="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure http://www.sdmx.org/docs/2_0/SDMXStructure.xsd http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message http://www.sdmx.org/docs/2_0/SDMXMessage.xsd">
+    <Header xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message">
+        <Id>none</Id>
+        <Truncated>false</Truncated>
+        <Prepared>2/20/2012 6:03:11 AM</Prepared>
+        <Sender Id="Knoema">
+            <name xml:lang="en">Knoema Technologies</name>
+        </Sender>
+    </Header>
+    <Dataset xmlns="http://stats.oecd.org/Index.aspx">
+        <Series Location="1000000" Variable="1000020" UNIT="Value in USD" UNIT_MULT="1" FREQ="A" TIME_FORMAT="P1Y">
+            <Obs TIME_PERIOD="2008-01-01" OBS_VALUE="-48887064092.1203" />
+            <Obs TIME_PERIOD="2009-01-01" OBS_VALUE="-43660522540.4393" />
+            <Obs TIME_PERIOD="2010-01-01" OBS_VALUE="-33074447795.7296" />
+            <Obs TIME_PERIOD="2011-01-01" OBS_VALUE="-24339007669.6158" />
+            <Obs TIME_PERIOD="2012-01-01" OBS_VALUE="-21623949952.2715" />
+            <Obs TIME_PERIOD="2013-01-01" OBS_VALUE="-32571575009.217" />
+        </Series>
+        <Series Location="1000010" Variable="1000020" UNIT="Value in USD" UNIT_MULT="1" FREQ="A" TIME_FORMAT="P1Y">
+            <Obs TIME_PERIOD="2008-01-01" OBS_VALUE="20222082482.4646" />
+            <Obs TIME_PERIOD="2009-01-01" OBS_VALUE="10391675554.0401" />
+            <Obs TIME_PERIOD="2010-01-01" OBS_VALUE="11183006638.9317" />
+            <Obs TIME_PERIOD="2011-01-01" OBS_VALUE="12653155894.7951" />
+            <Obs TIME_PERIOD="2012-01-01" OBS_VALUE="14300321657.1923" />
+            <Obs TIME_PERIOD="2013-01-01" OBS_VALUE="16707885963.3034" />
+        </Series>
+        <Series Location="1000020" Variable="1000020" UNIT="Value in USD" UNIT_MULT="1" FREQ="A" TIME_FORMAT="P1Y">
+            <Obs TIME_PERIOD="2008-01-01" OBS_VALUE="-8030980304.67331" />
+            <Obs TIME_PERIOD="2009-01-01" OBS_VALUE="-7464292628.42687" />
+            <Obs TIME_PERIOD="2010-01-01" OBS_VALUE="6802282510.28172" />
+            <Obs TIME_PERIOD="2011-01-01" OBS_VALUE="-2555054223.40259" />
+            <Obs TIME_PERIOD="2012-01-01" OBS_VALUE="-1735537471.83463" />
+            <Obs TIME_PERIOD="2013-01-01" OBS_VALUE="-1001621409.48415" />
+        </Series>
+    </Dataset>
+</message:structure>
+{% endhighlight %}
