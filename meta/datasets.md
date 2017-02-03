@@ -6,7 +6,7 @@ permalink: "/meta/datasets"
 
 # List of datasets
 
-**Endpoint:** [https://knoema.com/api/1.0/meta/dataset](https://knoema.com/api/1.0/meta/dataset) <br>
+**Endpoint:** [https://knoema.com/api/1.0/meta/dataset](https://knoema.com/api/1.0/meta/dataset "dataset endpoint") <br>
 Returns the list of datasets<br>
 **Response**
 
@@ -25,16 +25,17 @@ Returns the list of datasets<br>
 		<td>
 			List of dimensions associated with the dataset.<br>
 			Consists of&nbsp;<br>
-			Key:&nbsp;Unique key to identify a dimension<br>
-			Id:&nbsp;Dimension id (unique only across the dataset)<br>
-			Name:&nbsp;Dimension name</td>
+			&nbsp;Key:&nbsp;Unique key to identify a dimension<br>
+			&nbsp;Id:&nbsp;Dimension id (unique only across the dataset)<br>
+			&nbsp;Name:&nbsp;Dimension name</td>
 	</tr>
 	<tr>
 		<td>source</td>
 		<td>DatasetSource</td>
-		<td>Data provider&nbsp;Consists of<br>
-			Id:&nbsp;Unique provider Id<br>
-			Name:&nbsp;Provider's Name
+		<td>Data provider<br>
+			Consists of<br>
+			&nbsp;Id:&nbsp;Unique provider Id<br>
+			&nbsp;Name:&nbsp;Provider's Name
 		</td>
 	</tr>
 	<tr>
@@ -77,10 +78,10 @@ Returns the list of datasets<br>
 		<td>List&lt;Column&gt;</td>
 		<td>List of dataset columns<br>
 			Column consists of<br>
-			Key:&nbsp;Unique key to identify a column<br>
-			Name:&nbsp;Column name<br>
-			Order:&nbsp;Order of column<br>
-			Type:&nbsp;Type of column
+			&nbsp;Key:&nbsp;Unique key to identify a column<br>
+			&nbsp;Name:&nbsp;Column name<br>
+			&nbsp;Order:&nbsp;Order of column<br>
+			&nbsp;Type:&nbsp;Type of column
 		</td>
 	</tr>
 	<tr>
@@ -122,41 +123,41 @@ Returns the list of datasets<br>
 </table>
 
 **Example**<br>
-**Get:** [https://knoema.com/api/1.0/meta/dataset](https://knoema.com/api/1.0/meta/dataset "")
+**Get:** [https://knoema.com/api/1.0/meta/dataset](https://knoema.com/api/1.0/meta/dataset "dataset endpoint")
 {% highlight json %}
 [
 	{
 		"dimensions": [
 			{
 				"key": 2125000,
-		        "id": "country",
-		        "name": "Country",
-		        "isGeo": true,
-		        "geoType": "region"
-		    },
-		    {
-		        "key": 2125010,
-		        "id": "subject",
-		        "name": "Subject",
-		        "isGeo": false,
-		        "geoType": null
-		    }
+				"id": "country",
+				"name": "Country",
+		 		"isGeo": true,
+				"geoType": "region"
+			},
+			{
+				"key": 2125010,
+				"id": "subject",
+				"name": "Subject",
+				"isGeo": false,
+				"geoType": null
+			}
 		],
-	    "ref": "http://www.imf.org/en/data",
-	    "hasGeoDimension": true,
-	    "hasGeoMapColumn": false,
-	    "hasLatLngColumn": false,
-	    "replacementDataset": {
+		"ref": "http://www.imf.org/en/data",
+		"hasGeoDimension": true,
+		"hasGeoMapColumn": false,
+		"hasLatLngColumn": false,
+		"replacementDataset": {
 			"id": "IMFWEO2016Oct",
 			"name": "IMF World Economic Outlook (WEO), October 2016"
-	    },
-	    "columns": [
+		},
+		"columns": [
 			{
-		        "key": 4900780,
-		        "name": "Country",
-		        "order": 1,
-		        "type": "Text"
-	    	},
+				"key": 4900780,
+				"name": "Country",
+				"order": 1,
+				"type": "Text"
+			},
 			{
 				"key": 4900790,
 				"name": "RegionId",
@@ -170,117 +171,117 @@ Returns the list of datasets<br>
 				"type": "Text"
 			},
 			{
-		        "key": 4900810,
-		        "name": "Subject",
-		        "order": 4,
-		        "type": "Text"
+				"key": 4900810,
+				"name": "Subject",
+				"order": 4,
+				"type": "Text"
 			},
 			{
-		        "key": 4900820,
-		        "name": "SubjectDescription",
-		        "order": 5,
-		        "type": "Text"
+				"key": 4900820,
+				"name": "SubjectDescription",
+				"order": 5,
+				"type": "Text"
 			},
 			{
-		        "key": 4900830,
-		        "name": "SubjectNotes",
-		        "order": 6,
-		        "type": "Text"
+				"key": 4900830,
+				"name": "SubjectNotes",
+				"order": 6,
+				"type": "Text"
 			},
 			{
-		        "key": 4900840,
-		        "name": "Id",
-		        "order": 7,
-		        "type": "Text"
+				"key": 4900840,
+				"name": "Id",
+				"order": 7,
+				"type": "Text"
 			},
 			{
-		        "key": 4900850,
-		        "name": "Value",
-		        "order": 8,
-		        "type": "Number"
+				"key": 4900850,
+				"name": "Value",
+				"order": 8,
+				"type": "Number"
 			},
 			{
-		        "key": 4900860,
-		        "name": "Date",
-		        "order": 9,
-		        "type": "Date"
+				"key": 4900860,
+				"name": "Date",
+				"order": 9,
+				"type": "Date"
 			}
 		],
-	    "type": "Regular",
-	    "regionDimensionId": "country",
-	    "geoPositionDimensionId": null,
-	    "status": 2,
-	    "customMetadataFieldValues": null,
-	    "hasShortCut": false,
-	    "url": null,
-	    "settings": null,
-	    "isShortcut": false,
-	    "publicationDate": "2016-04-01T00:00:00",
-	    "title": "imf-world-economic-outlook-weo-april-2016",
-	    "accessedOn": "2016-04-14T00:00:00",
-	    "lastUpdatedOn": "2016-04-21T18:27:00",
-	    "source": {
+		"type": "Regular",
+		"regionDimensionId": "country",
+		"geoPositionDimensionId": null,
+		"status": 2,
+		"customMetadataFieldValues": null,
+		"hasShortCut": false,
+		"url": null,
+		"settings": null,
+		"isShortcut": false,
+		"publicationDate": "2016-04-01T00:00:00",
+		"title": "imf-world-economic-outlook-weo-april-2016",
+		"accessedOn": "2016-04-14T00:00:00",
+		"lastUpdatedOn": "2016-04-21T18:27:00",
+		"source": {
 			"id": "IMF",
 			"name": "International Monetary Fund",
 			"isVerified": true
-	    },
-	    "key": 2735370,
-	    "id": "IMFWEO2016Apr",
-	    "name": "IMF World Economic Outlook (WEO), April 2016",
-	    "description": "",
-	    "owner": "Knoema",
-	    "isPublic": true
+		},
+		"key": 2735370,
+		"id": "IMFWEO2016Apr",
+		"name": "IMF World Economic Outlook (WEO), April 2016",
+		"description": "",
+		"owner": "Knoema",
+		"isPublic": true
 	},
 	{
-	    "dimensions": [
+		"dimensions": [
 			{
-		        "key": 1630060,
-		        "id": "reporter",
-		        "name": "Reporter",
-		        "isGeo": true,
-		        "geoType": "region"
+				"key": 1630060,
+				"id": "reporter",
+				"name": "Reporter",
+				"isGeo": true,
+				"geoType": "region"
 			},
-	      	{ ... }
-	    ],
-	    "ref": "http://comtrade.un.org/db/",
-	    "hasGeoDimension": true,
-	    "hasGeoMapColumn": false,
-	    "hasLatLngColumn": false,
-	    "replacementDataset": null,
-	    "columns": [
+			{ ... }
+		],
+		"ref": "http://comtrade.un.org/db/",
+		"hasGeoDimension": true,
+		"hasGeoMapColumn": false,
+		"hasLatLngColumn": false,
+		"replacementDataset": null,
+		"columns": [
 			{
-		        "key": 3363870,
-		        "name": "Reporter",
-		        "order": 1,
-		        "type": "Text"
+				"key": 3363870,
+				"name": "Reporter",
+				"order": 1,
+				"type": "Text"
 			},
-	      	{ ... }     
-	    ],
-	    "type": "Regular",
-	    "regionDimensionId": "reporter",
-	    "geoPositionDimensionId": null,
-	    "status": 2,
-	    "customMetadataFieldValues": null,
-	    "hasShortCut": false,
-	    "url": null,
-	    "settings": "{\"ColumnStoreFlag\":true,\"UseDataSessionFlag\":true,\"UseExtendedCountTablesFlag\":true,\"ColumnStoreTable\":\"[COMTRADE2015R1].[DataCol]\",\"ExtendedCountTablesUpdateStamp\":\"2016-07-28 07:11:05\"}",
-	    "isShortcut": true,
-	    "publicationDate": "2016-05-26T00:00:00",
-	    "title": "un-comtrade-merchandise-trade-by-commodity-hs-as-reported",
-	    "accessedOn": "2016-05-26T00:00:00",
-	    "lastUpdatedOn": "2016-07-28T06:17:12",
-	    "source": {
+			{ ... }
+		],
+		"type": "Regular",
+		"regionDimensionId": "reporter",
+		"geoPositionDimensionId": null,
+		"status": 2,
+		"customMetadataFieldValues": null,
+		"hasShortCut": false,
+		"url": null,
+		"settings": "{\"ColumnStoreFlag\":true,\"UseDataSessionFlag\":true,\"UseExtendedCountTablesFlag\":true,\"ColumnStoreTable\":\"[COMTRADE2015R1].[DataCol]\",\"ExtendedCountTablesUpdateStamp\":\"2016-07-28 07:11:05\"}",
+		"isShortcut": true,
+		"publicationDate": "2016-05-26T00:00:00",
+		"title": "un-comtrade-merchandise-trade-by-commodity-hs-as-reported",
+		"accessedOn": "2016-05-26T00:00:00",
+		"lastUpdatedOn": "2016-07-28T06:17:12",
+		"source": {
 			"id": "UNSD",
 			"name": "United Nations Statistics Division",
 			"isVerified": true
-	    },
-	    "key": 2733950,
-	    "id": "xhxkuab",
-	    "name": "UN Comtrade: Merchandise trade by Commodity, HS - As Reported",
-	    "description": null,
-	    "owner": "Knoema",
-	    "isPublic": true
+		},
+		"key": 2733950,
+		"id": "xhxkuab",
+		"name": "UN Comtrade: Merchandise trade by Commodity, HS - As Reported",
+		"description": null,
+		"owner": "Knoema",
+		"isPublic": true
 	},
-  	{ ... }
+	{ ... }
 ]
 {% endhighlight %}
