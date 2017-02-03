@@ -14,6 +14,7 @@ Each dataset consists of **observations** or **records** which hold numerical va
 Each dataset in Knoema has a number of associated **dimensions** used to categorize data in this dataset. Each dimension is an ordered hierarchical list of values or **dimension members**. Dataset's dimension are used as filters while accessing data. For example, in a dataset having Country and Indicator dimensions user can select all population data for United States by setting filter to Country = United States and Indicator = Population.
 
 You can access information about datasets and their dimensions using endpoints in /api/meta namespace:
-[Getting list of all available datasets](/meta/datasets "")
-[Getting dataset details (including list of dimensions)](/meta/datasetdetails "")
+
+[Getting list of all available datasets](/meta/datasets "")<br>
+[Getting dataset details (including list of dimensions)](/meta/datasetdetails "")<br>
 [Getting dimension details](/meta/dimension "")
